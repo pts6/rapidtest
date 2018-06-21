@@ -20,9 +20,10 @@
         <swagger.version>2.7.0</swagger.version>
         <swagger.ui.version>3.5.0</swagger.ui.version>
         <swagger.jersey2.version>1.5.17</swagger.jersey2.version>
+        <!-- <docker.image.prefix>springio</docker.image.prefix> -->
     </properties>
 
-        <dependencyManagement>
+    <dependencyManagement>
             <dependencies>
                 <dependency>
                     <groupId>org.springframework.boot</groupId>
@@ -102,6 +103,24 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <!--
+            <plugin>
+	                <groupId>com.spotify</groupId>
+	                <artifactId>docker-maven-plugin</artifactId>
+	                <version>1.0.0</version>
+	                <configuration>
+	                    <imageName>${docker.image.prefix}/${artifactId}</imageName>
+	                    <dockerDirectory>src/main/docker</dockerDirectory>
+	                    <resources>
+	                        <resource>
+	                            <targetPath>/</targetPath>
+	                            <directory>${project.build.directory}</directory>
+	                            <include>${project.build.finalName}.jar</include>
+	                        </resource>
+	                    </resources>
+	                </configuration>
+            </plugin>
+            -->
             <plugin>
                 <groupId>com.googlecode.maven-download-plugin</groupId>
                 <artifactId>download-maven-plugin</artifactId>
