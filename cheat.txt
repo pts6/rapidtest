@@ -2,3 +2,24 @@ SET JAVA_HOME=C:\devtools\jdk1.8.0_66
 SET MAVEN_HOME=C:\apache-maven-3.0.5
 SET PATH=C:\devtools\jdk1.8.0_66\bin;C:\apache-maven-3.0.5\bin;%PATH%;C:\devtools\node-v8.9.2-win-x64\node-v8.9.2-win-x64
 SET PATH=%PATH%;C:\Program Files\Heroku\bin;.
+
+Elastic Beanstalk
+EC2-Manual
+
+C:\devtools\Putty>pscp -i c:/devtools/aws_keys/pts6testing.pem c:/projects/rapidtest/target/springboot-jersey-swagger-1.
+0.0.jar ec2-user@18.208.149.83:/home/ec2-user
+
+sudo su
+yum remove java-1.7.0-openjdk -y
+yum install java-1.8.0
+sudo alternatives --config java
+Select Option: 1
+
+Add Custom TCP Rule (INBOUND Rule - Allow 8080 port)
+http://18.208.149.83:8080/swagger-ui.html
+
+Works !!
+
+Connect to DB (Created/Can't connect from machine/Offline Connected using pgAdmin)
+Use AWS Parameter Store
+
