@@ -11,4 +11,4 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/springboot-jersey-swagger-1.0-SNAPSHOT.jar
+    - target/springboot-jersey-swagger-1.0.0.jar
