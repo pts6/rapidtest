@@ -19,8 +19,12 @@ datasource:
 
 jpa:
   show-sql: true
+  #database: postgresql
   format_sql: true
   properties:
+    #hibernate:
+      #dialect: org.hibernate.dialect.PostgreSQLDialect
+      #ddl-auto: update
     org:
       hibernate:
         flushMode: AUTO
@@ -30,5 +34,12 @@ jpa:
 #    org.springframework: DEBUG
 
 spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://crxxphw9xlft.us-west-1.rds.amazonaws.com:5432/rapiddatabase
+    username: rapiduser
+    password: rapidpassword
+    
   jersey:
     type: filter
+    
