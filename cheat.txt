@@ -23,3 +23,7 @@ Works !!
 Connect to DB (Created/Can't connect from machine/Offline Connected using pgAdmin)
 Use AWS Parameter Store
 
+git add .
+git commit -m ""
+git push origin master
+
