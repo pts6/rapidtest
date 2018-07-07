@@ -10,6 +10,7 @@ phases:
       - echo Build completed on `date`
       - mvn package
 artifacts:
+  type: zip
   files:
     - target/springboot-jersey-swagger-1.0.0.jar
     - appspec.yml
