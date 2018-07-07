@@ -11,6 +11,6 @@ phases:
       - mvn package
 artifacts:
   files:
-    - deploy/*
+    - target/springboot-jersey-swagger-1.0.0.jar
     
   discard-paths: yes
