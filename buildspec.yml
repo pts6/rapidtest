@@ -15,4 +15,4 @@ artifacts:
     - target/springboot-jersey-swagger-1.0.0.jar
     - appspec.yml
     
-  discard-paths: yes
+  
