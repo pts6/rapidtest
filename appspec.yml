@@ -1,5 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: ./springboot-jersey-swagger-1.0.0.jar
+  - source: /springboot-jersey-swagger-1.0.0.jar
     destination: /home/ec2-user
