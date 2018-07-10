@@ -12,8 +12,10 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/springboot-jersey-swagger-1.0.0.jar
+    - springboot-jersey-swagger-1.0.0.jar
     - appspec.yml
-        
+    
+  discard-paths: yes
+    
   
     
