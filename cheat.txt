@@ -27,3 +27,4 @@ git add .
 git commit -m ""
 git push origin master
 
+set HTTP_PROXY=http://webcache.comp.pge.com:8080
