@@ -32,5 +32,6 @@ set HTTP_PROXY=http://webcache.comp.pge.com:8080
 use http://www.yamllint.com/ (validate yaml file)
 https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started.html
 
-Created SNS/Subscribe by email to approve deployment
+Created SNS/Subscribe by email to approve deployment!!
+
 
