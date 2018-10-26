@@ -5,14 +5,12 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - mvn clean
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn install
 artifacts:
   files:
-    - target/springboot-jersey-swagger-1.0.0.jar
-    - appspec.yml
-    
-  
-    
+    - 'target/springboot-jersey-swagger-1.0.0.jar'
+    - 'Dockerfile'    
