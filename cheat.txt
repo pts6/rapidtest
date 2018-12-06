@@ -3,6 +3,26 @@ SET MAVEN_HOME=C:\apache-maven-3.0.5
 SET PATH=C:\devtools\jdk1.8.0_66\bin;C:\apache-maven-3.0.5\bin;%PATH%;C:\devtools\node-v8.9.2-win-x64\node-v8.9.2-win-x64
 SET PATH=%PATH%;C:\Program Files\Heroku\bin;.
 
+Connect to DB (Created/Can't connect from machine/Offline Connected using pgAdmin)
+
+set HTTPS_PROXY=http://webcache.comp.pge.com:8080
+set HTTP_PROXY=http://webcache.comp.pge.com:8080
+
+heroku login --sso
+git init
+git add .
+git commit -m "rapidtest springboot"
+heroku apps:create rapidtest1 --team ccoe --space ccoesandbox
+git push origin master
+
+heroku local web (http://localhost:5000/swagger-ui.html)
+heroku open (http://rapidtest1.herokuapp.com/swagger-ui.html)
+
+set HTTPS_PROXY=http://webcache.comp.pge.com:8080
+set HTTP_PROXY=http://webcache.comp.pge.com:8080
+
+====AWS
+
 Elastic Beanstalk
 EC2-Manual
 
@@ -17,20 +37,8 @@ Select Option: 1
 Add Custom TCP Rule (INBOUND Rule - Allow 8080 port)
 http://18.208.149.83:8080/swagger-ui.html
 
-Works !!
-
-Connect to DB (Created/Can't connect from machine/Offline Connected using pgAdmin)
-Use AWS Parameter Store
-
-git add .
-git commit -m ""
-git push origin master
-
-set HTTPS_PROXY=http://webcache.comp.pge.com:8080
-
 use http://www.yamllint.com/ (validate yaml file)
 https://docs.aws.amazon.com/codebuild/latest/userguide/getting-started.html
 
 Created SNS/Subscribe by email to approve deployment!!
-
 

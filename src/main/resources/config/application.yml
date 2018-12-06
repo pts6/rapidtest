@@ -5,8 +5,8 @@ server:
 
 # For Spring Actuator /info endpoint
 info:
-    artifact: springboot-jesrsey-swagger
-    name: springboot-jesrsey-swagger
+    artifact: rapidtest
+    name: rapidtest
     description: Spring Jersey Swagger Example
     version: 1.0.0
 
