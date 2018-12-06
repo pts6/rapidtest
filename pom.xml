@@ -93,11 +93,21 @@
             <scope>test</scope>
         </dependency>
         
-	<!-- JSON Logging -->
-        <dependency>
+	<!-- JSON formatted logs -->
+	<dependency>
 	    <groupId>net.logstash.logback</groupId>
 	    <artifactId>logstash-logback-encoder</artifactId>
+	    <version>4.3</version>
 	</dependency>
+
+	<!-- Production ready features - Actuator endpoints let you monitor and interact with your application
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+	</dependencies>
+	-->
 
     </dependencies>
 

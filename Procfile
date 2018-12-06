@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/rapidtest-1.0.0.jar
+web: java -Dserver.port=8082 -jar target/rapidtest-1.0.0.jar

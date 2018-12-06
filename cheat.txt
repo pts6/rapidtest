@@ -28,8 +28,41 @@ set HTTP_PROXY=http://webcache.comp.pge.com:8080
 
 Heroku Postgres Database
 heroku addons:create heroku-postgresql
-heroku config (get the config entries)
+heroku config (SET all sensitive information as variables) and then add  password: ${ADMIN_PASSWORD} under application.yml
 heroku pg (Database info)
+
+Heroku Caching
+Storing sessions in-memory prohibits disposability and horizontal scalability of dynos. 
+That’s why it’s important to use a distributed session store like Redis for server side session caching (login state; shopping cart)
+https://devcenter.heroku.com/articles/java-session-handling-on-heroku
+
+heroku addons:create heroku-redis
+web: java -jar target/rapidtest-1.0.0.jar --session-store redis target/myapp.war
+
+Heroku JVM Runtime Matrics
+The JVM Runtime Metrics feature allows you to view heap and non-heap memory, as well as garbage collection activity, for any app that runs inside of the Java Virtual Machine (JVM). 
+
+heroku labs:enable "runtime-heroku-metrics" -a "my-app-name"
+git commit --allow-empty -m "Enable Heroku Metrics"
+git push heroku master
+
+heroku labs:disable "runtime-heroku-metrics" -a "my-app-name"
+git commit --allow-empty -m "Enable Heroku Metrics"
+git push heroku master
+
+Configure error/maintenance page ON
+https://devcenter.heroku.com/articles/preparing-a-spring-boot-app-for-production-on-heroku#configure-error-and-maintenance-pages
+
+Attach logging addon
+heroku addons:create papertrail
+
+Detail error/stack traces of errors
+heroku addons:create rollbar
+
+Security Vulnerability
+heroku addons:create snyk
+heroku addons:create snyk --app YOUR_APP_NAME_HERE
+heroku addons:destroy snyk
 
 ====AWS
 

@@ -42,4 +42,15 @@ spring:
     
   jersey:
     type: filter
-    
+
+# rate limiting - Limits an individual user to a maximum of 5 requests within a 10 second period
+bucket4j:
+  enabled: true
+  filters:
+  - cache-name: buckets
+    url: /*
+    rate-limits:
+    - bandwidths:
+      - capacity: 5
+        time: 10
+        unit: seconds    
