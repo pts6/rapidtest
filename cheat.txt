@@ -6,8 +6,7 @@ SET PATH=%PATH%;C:\Program Files\Heroku\bin;.
 Elastic Beanstalk
 EC2-Manual
 
-C:\devtools\Putty>pscp -i c:/devtools/aws_keys/pts6testing.pem c:/projects/rapidtest/target/springboot-jersey-swagger-1.
-0.0.jar ec2-user@18.208.149.83:/home/ec2-user
+C:\devtools\Putty>pscp -i c:/devtools/aws_keys/pts6testing.pem c:/projects/rapidtest/target/rapidtest-1.0.0.jar ec2-user@18.208.149.83:/home/ec2-user
 
 sudo su
 yum remove java-1.7.0-openjdk -y

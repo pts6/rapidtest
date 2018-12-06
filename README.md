@@ -14,7 +14,7 @@ mvn clean install
 To run the application fromm command line,
 
 ```
-java -DPORT=8090 -jar target/springboot-jersey-swagger-1.0.0.jar
+java -DPORT=8090 -jar target/rapidtest-1.0.0.jar
 
 ```
 

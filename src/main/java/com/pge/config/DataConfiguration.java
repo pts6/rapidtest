@@ -24,7 +24,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @EnableTransactionManagement
 public class DataConfiguration {
 
-
     @Bean
     public DataSource dataSource() {
         EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
