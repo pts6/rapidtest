@@ -15,7 +15,7 @@ git commit -m "rapidtest springboot"
 heroku apps:create rapidtest1 --team ccoe --space ccoesandbox
 git push origin master
 
-heroku local web (http://localhost:5000/swagger-ui.html)
+heroku local web -p8090 (http://localhost:5000/swagger-ui.html)
 heroku open (http://rapidtest1.herokuapp.com/swagger-ui.html)
 heroku logs
 heroku ps
