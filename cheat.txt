@@ -17,9 +17,19 @@ git push origin master
 
 heroku local web (http://localhost:5000/swagger-ui.html)
 heroku open (http://rapidtest1.herokuapp.com/swagger-ui.html)
+heroku logs
+heroku ps
+
+heroku addons
+heroku info (Check Which Region)
 
 set HTTPS_PROXY=http://webcache.comp.pge.com:8080
 set HTTP_PROXY=http://webcache.comp.pge.com:8080
+
+Heroku Postgres Database
+heroku addons:create heroku-postgresql
+heroku config (get the config entries)
+heroku pg (Database info)
 
 ====AWS
 
