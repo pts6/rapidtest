@@ -3,12 +3,13 @@ server:
   port: ${PORT:8080}
 
 # For Spring Actuator /info endpoint
-#info:
-#    artifact: rapidtest
-#    name: rapidtest
-#    description: Spring Jersey Swagger Example
-#    version: 1.0.0
+info:
+    artifact: rapidtest
+    name: rapidtest
+    description: Spring Jersey Swagger Example
+    version: 1.0.0
 
+spring:
 jpa:
   show-sql: true
   database: postgresql
@@ -17,19 +18,16 @@ jpa:
     hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
       ddl-auto: update
-#    org:
-#      hibernate:
-#        flushMode: AUTO
+    org:
+      hibernate:
+        flushMode: AUTO
 
+spring:
 datasource:
   driverClassName: org.postgresql.Driver
   url: jdbc:postgresql://ec2-54-245-54-211.us-west-2.compute.amazonaws.com:5432/d91osu1mok3eqd
   username: u472al5sce21e8
   password: p29044cb29df7edc89d62184557ee0f2a9292194ee8c140342b5807307f9a6a5a
-
-#logging:
-#  level:
-#    org.springframework: DEBUG
 
 jersey:
  type: filter
