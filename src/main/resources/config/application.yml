@@ -2,12 +2,20 @@
 server:
   port: ${PORT:8080}
 
+
 # For Spring Actuator /info endpoint
 info:
-    artifact: rapidtest
-    name: rapidtest
+    artifact: springboot-jesrsey-swagger
+    name: springboot-jesrsey-swagger
     description: Spring Jersey Swagger Example
     version: 1.0.0
+
+datasource:
+  validationQuery: SELECT 1
+  initialSize: 1
+  maxActive: 3
+  testWhileIdle: true
+  testOnBorrow: true
 
 jpa:
   show-sql: true
@@ -16,20 +24,23 @@ jpa:
   properties:
     hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
-      //ddl-auto: update
+      ddl-auto: update
     org:
       hibernate:
         flushMode: AUTO
-
-datasource:
-  driverClassName: org.postgresql.Driver
-  url: jdbc:postgresql://ec2-54-245-54-211.us-west-2.compute.amazonaws.com:5432/d91osu1mok3eqd
-  username: u472al5sce21e8
-  password: p29044cb29df7edc89d62184557ee0f2a9292194ee8c140342b5807307f9a6a5a
 
 #logging:
 #  level:
 #    org.springframework: DEBUG
 
-jersey:
- type: filter
+spring:
+  datasource:
+    datasource:
+      driverClassName: org.postgresql.Driver
+      url: jdbc:postgresql://ec2-54-245-54-211.us-west-2.compute.amazonaws.com:5432/d91osu1mok3eqd
+      username: u472al5sce21e8
+      password: p29044cb29df7edc89d62184557ee0f2a9292194ee8c140342b5807307f9a6a5a
+    
+  jersey:
+    type: filter
+    
