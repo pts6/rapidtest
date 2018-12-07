@@ -11,7 +11,7 @@ info:
 
 jpa:
   show-sql: true
-  database: postgresql
+  database: d91osu1mok3eqd
   format_sql: true
   properties:
     hibernate:
