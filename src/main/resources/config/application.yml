@@ -16,7 +16,7 @@ jpa:
   properties:
     hibernate:
       dialect: org.hibernate.dialect.PostgreSQLDialect
-      ddl-auto: create-drop
+      ddl-auto: update
     org:
       hibernate:
         flushMode: AUTO
