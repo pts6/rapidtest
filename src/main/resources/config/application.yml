@@ -22,7 +22,6 @@ jpa:
       hibernate:
         flushMode: AUTO
 
-spring:
 datasource:
   driverClassName: org.postgresql.Driver
   url: jdbc:postgresql://ec2-54-245-54-211.us-west-2.compute.amazonaws.com:5432/d91osu1mok3eqd
