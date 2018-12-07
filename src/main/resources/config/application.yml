@@ -2,7 +2,6 @@
 server:
   port: ${PORT:8080}
 
-
 # For Spring Actuator /info endpoint
 info:
     artifact: rapidtest
@@ -10,38 +9,30 @@ info:
     description: Spring Jersey Swagger Example
     version: 1.0.0
 
-datasource:
-  validationQuery: SELECT 1
-  initialSize: 1
-  maxActive: 3
-  testWhileIdle: true
-  testOnBorrow: true
-
 jpa:
   show-sql: true
-  #database: postgresql
+  database: postgresql
   format_sql: true
   properties:
-    #hibernate:
-      #dialect: org.hibernate.dialect.PostgreSQLDialect
-      #ddl-auto: update
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
     org:
       hibernate:
         flushMode: AUTO
+
+datasource:
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://ec2-54-245-54-211.us-west-2.compute.amazonaws.com:5432/d91osu1mok3eqd
+  username: u472al5sce21e8
+  password: p29044cb29df7edc89d62184557ee0f2a9292194ee8c140342b5807307f9a6a5a
 
 #logging:
 #  level:
 #    org.springframework: DEBUG
 
-spring:
-  datasource:
-    driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://crxxphw9xlft.us-west-1.rds.amazonaws.com:5432/rapiddatabase
-    username: rapiduser
-    password: rapidpassword
-    
-  jersey:
-    type: filter
+jersey:
+ type: filter
 
 # rate limiting - Limits an individual user to a maximum of 5 requests within a 10 second period
 #bucket4j:

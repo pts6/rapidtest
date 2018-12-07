@@ -3,12 +3,12 @@ SET MAVEN_HOME=C:\apache-maven-3.0.5
 SET PATH=C:\devtools\jdk1.8.0_66\bin;C:\apache-maven-3.0.5\bin;%PATH%;C:\devtools\node-v8.9.2-win-x64\node-v8.9.2-win-x64
 SET PATH=%PATH%;C:\Program Files\Heroku\bin;.
 
-Connect to DB (Created/Can't connect from machine/Offline Connected using pgAdmin)
-
 set HTTPS_PROXY=http://webcache.comp.pge.com:8080
 set HTTP_PROXY=http://webcache.comp.pge.com:8080
 
+heroku spaces:create --cidr 10.93.0.0/16 --team ccoe --region oregon --space ccoesandbox
 heroku login --sso
+
 git init
 git add .
 git commit -m "rapidtest springboot"
@@ -20,16 +20,16 @@ heroku open (http://rapidtest1.herokuapp.com/swagger-ui.html)
 heroku logs
 heroku ps
 
+heroku drains:get --space energyinsightpge-space
+
 heroku addons
 heroku info (Check Which Region)
-
-set HTTPS_PROXY=http://webcache.comp.pge.com:8080
-set HTTP_PROXY=http://webcache.comp.pge.com:8080
 
 Heroku Postgres Database
 heroku addons:create heroku-postgresql
 heroku config (SET all sensitive information as variables) and then add  password: ${ADMIN_PASSWORD} under application.yml
 heroku pg (Database info)
+Connect to DB (Created/Can't connect from machine/Offline Connected using pgAdmin)
 
 Heroku Caching
 Storing sessions in-memory prohibits disposability and horizontal scalability of dynos. 
