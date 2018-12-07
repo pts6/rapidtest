@@ -9,14 +9,14 @@ server:
 #    description: Spring Jersey Swagger Example
 #    version: 1.0.0
 
-#jpa:
-#  show-sql: true
-#  database: postgresql
-#  format_sql: true
-#  properties:
-#    hibernate:
-#      dialect: org.hibernate.dialect.PostgreSQLDialect
-#      ddl-auto: update
+jpa:
+  show-sql: true
+  database: postgresql
+  format_sql: true
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
 #    org:
 #      hibernate:
 #        flushMode: AUTO
@@ -34,14 +34,3 @@ datasource:
 jersey:
  type: filter
 
-# rate limiting - Limits an individual user to a maximum of 5 requests within a 10 second period
-#bucket4j:
-#  enabled: true
-#  filters:
-#  - cache-name: buckets
-#    url: /*
-#    rate-limits:
-#    - bandwidths:
-#      - capacity: 5
-#        time: 10
-#        unit: seconds    
